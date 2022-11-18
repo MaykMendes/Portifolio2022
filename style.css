@@ -1,0 +1,254 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+/* Navbar -----------------------------------------------------*/
+.nav-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: .5em 4em .5em 4em;
+    align-items: center ;
+    background-color: #000000;
+}
+
+.logo{
+    color: white;
+    font-size: 35px;
+    display: flex;
+}
+
+.hamburguer, .nav-bar > i{
+    display: none;
+}
+
+.nav-link{
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link > a{
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: .3s;
+}
+
+.nav-link > a:hover{
+    color: rgb(230, 200, 250);
+}
+
+/*Sobre mim --------------------------------------------------*/
+.home-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #3e04b9;
+    border-bottom-left-radius: 200% ;
+   
+    min-height: 90vh;
+}
+
+.home{
+    display: flex;
+    justify-content: space-between;
+    padding: 8em 0em 8em 0em;
+    gap: 20em;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.aprensentacao h1{
+    font-size: 80px;
+    color: #fff;
+}
+
+.aprensentacao h3{
+   font-size: 35px; 
+   color: #fff;
+}
+
+.sobre-mim2 > img{
+    height: 280px;
+    width: 280px;
+    border-radius: 50%;
+    border: 2px solid #202350;
+}
+
+.arrow-down {
+    
+    height: 3em;
+}
+
+.arrow-down > i {
+    font-size: 30px;
+    animation: move 2s infinite;
+    color: #3e04b9;
+    margin-top: 8em;
+}
+
+@keyframes move{
+    0% {padding-top: 0px;}
+    50% {padding-top: 20px;}
+    100% {padding-top: 0px;}
+}
+
+.sobre{
+    padding-top: 5em;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 10em;
+    padding: 5em 3em 0em 3em;
+    background-color: #000000;
+    border-top-left-radius: 200% ;
+}
+
+.sobre-mim > h1, p {
+    color: #fff;
+    
+}
+
+.svg{
+    width: 2000px;
+}
+
+/*Projetos ---------------------------------------------------*/
+projects{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+    padding-top: 4em;
+}
+
+projects > h1{
+    color: #000000;
+}
+
+.projetos{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    padding: 0 5em 0 5em;
+    justify-content: center;
+}
+
+.projetos-div{
+    cursor: pointer;
+    position: relative;
+}
+
+.projetos-img{
+    height: 200px;
+    width: 300px;
+    transition: .3s;
+}
+
+.desc{
+    position: absolute;
+    top: 140px;
+    left: 10px;
+   
+}
+
+.desc, h1{
+    color: #fff;
+}
+
+.projetos-img:hover {
+    filter: brightness(50%);
+}
+
+/*Footer ------------------------------------------------------*/
+.footer{
+    margin-top: 10em;
+    background-color: #000000;
+}
+
+.footer-main{
+    display: flex;
+    justify-content: center;
+    padding: 1em 0 1em 0;
+}
+
+
+
+
+/*Responsivo --------------------------------------------------*/
+@media only screen and (max-width: 900px){
+    
+    /*Navbar ----------------*/
+    .nav-bar{
+        justify-content: space-between;
+        padding: .5em 1em .5em 1em;
+    }
+
+    .nav-link{
+        display: none;
+    }
+
+    .nav-bar > i {
+        color: white;
+        font-size: 25px;
+        display: block;
+    }
+
+    .nav-link-hamburguer{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        display: none;
+    }
+
+
+
+    .nav-link-hamburguer > a{
+        text-decoration: none;
+
+    }
+
+
+    /*Main ----------------------------------------------------*/
+    .home{
+        flex-direction: column-reverse;
+        padding: 3em 1em 8em 1em;
+        gap: 0em;
+        position: relative;
+        
+    }
+
+    .aprensentacao{
+        padding-top: 4em;
+       
+    }
+
+    .aprensentacao h1{
+        font-size: 55px;
+    }
+
+
+    .sobre-mim2 > img{
+        height: 200px;
+        width: 200px;
+    }
+
+    .arrow-down{
+       padding-top: 3em; 
+    }
+
+    /*About me--------------------------------------------------*/
+    .sobre-mim{
+        text-align: justify;
+        padding: 0 1em 0 1em;
+    }
+
+    .svg{
+        display: none;
+    }
+}
